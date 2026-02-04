@@ -9,10 +9,11 @@ version = "1.0"
 
 repositories {
     mavenCentral()
+    maven { url = uri("https://jitpack.io") }
 }
 
 dependencies {
-    implementation("io.github.kotlin-telegram-bot.kotlin-telegram-bot:telegram:6.1.0")
+    implementation("io.github.kotlin-telegram-bot.kotlin-telegram-bot:telegram:6.3.0")
     implementation("org.xerial:sqlite-jdbc:3.45.1.0")
     implementation("ch.qos.logback:logback-classic:1.5.13")
 }
@@ -22,13 +23,13 @@ kotlin {
 }
 
 application {
-    mainClass.set("com.example.MainKt")
+    mainClass.set("MainKt")
 }
 
 //tasks.shadowJar {
 //    archiveBaseName.set("notes-bot")
-//    archiveVersion.set("")        // чтобы имя было без -1.0
-//    archiveClassifier.set("all")  // notes-bot-all.jar
+//    archiveVersion.set("")
+//    archiveClassifier.set("")
 //
 //    mergeServiceFiles()
 //
